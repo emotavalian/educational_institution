@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "debug_toolbar",
-    'course',
+    'debug_toolbar',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'main_store',
+        'NAME': 'educatiobal_institute',
         'HOST': 'localhost',
         'USER': 'root',
         'PASSWORD': 'ELAHE276753541',
@@ -137,8 +137,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#AUTH_USER_MODEL = "core.CustomUser"
+
 INTERNAL_IPS = [#debug_toolbar needs this 
     # ...
     "127.0.0.1",
     # ...
 ]
+
+AUTH_USER_MODEL = 'core.CustomUser'
